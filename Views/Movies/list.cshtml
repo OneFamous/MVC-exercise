@@ -1,0 +1,31 @@
+﻿@model exercise.ViewModels.MoviesViewModel
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.header.Name</h2>
+
+@if (!Model.movies.Any())
+{
+    <text>Film Yok!</text>
+}
+else
+{
+    <table>
+        <tr>
+            <th>Movie</th>
+            <th>Genre</th>
+        </tr>
+        @foreach (var movie in Model.movies)
+        {
+            <tr>
+                <td><a href="@Url.Action("Details", "Movies", new { id = movie.Id })">@movie.Name</a></td>
+                <td>
+                    @movie.genres.Name
+                </td>
+            </tr>
+        }
+    </table>
+}

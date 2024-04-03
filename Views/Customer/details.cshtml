@@ -1,0 +1,27 @@
+﻿@model exercise.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Detail</h2>
+
+@if (Model != null)
+{
+    <dl>
+        <dt>Id:</dt>
+        <dd>@Model.Id</dd>
+        <dt>Name:</dt>
+        <dd>@Model.Name</dd>
+        <dt>BirthDate:</dt>
+        <dd>@Model.BirthDate.ToString("yyyy-MM-dd")</dd>
+        <dt>MemberhipType:</dt>
+        <dd>@Model.MembershipType.Name</dd>
+
+    </dl>
+}
+else
+{
+    <p>Customer not found!</p>
+}
