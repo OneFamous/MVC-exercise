@@ -17,5 +17,10 @@ namespace exercise.Models
 
         public DateTime BirthDate { get; set; }
         public MembershipType MembershipType { get; set; }
+
+        [Display(Name = "Membership Type")]
+        public byte MembershipTypeId { get; set; }
+
+        public bool IsAdmin { get; set; }
     }
 }

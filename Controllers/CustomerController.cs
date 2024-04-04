@@ -36,5 +36,28 @@ namespace exercise.Controllers
             var genre = db.Customers.Include("MembershipType").ToList();
             return View(customer);
         }
+
+        public ActionResult New() 
+        {
+            var membershipTypes = db.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                Customer = new Customer(),
+                MembershipTypes = membershipTypes
+
+            };
+
+        
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Customer customer)    
+        {
+            db.Customers.Add(customer);
+            db.SaveChanges();
+
+            return RedirectToAction("List");
+        }
     }
 }

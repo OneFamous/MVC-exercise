@@ -224,6 +224,18 @@
     <Compile Include="Migrations\202403171012290_PopulateGenresTable.Designer.cs">
       <DependentUpon>202403171012290_PopulateGenresTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404031701537_addCustomerIsAdmin.cs" />
+    <Compile Include="Migrations\202404031701537_addCustomerIsAdmin.Designer.cs">
+      <DependentUpon>202404031701537_addCustomerIsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404031814267_edit1.cs" />
+    <Compile Include="Migrations\202404031814267_edit1.Designer.cs">
+      <DependentUpon>202404031814267_edit1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404031823480_edit2.cs" />
+    <Compile Include="Migrations\202404031823480_edit2.Designer.cs">
+      <DependentUpon>202404031823480_edit2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -237,6 +249,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\MoviesViewModel.cs" />
+    <Compile Include="ViewModels\NewCustomerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -313,6 +326,7 @@
     <Content Include="Views\Customer\details.cshtml" />
     <Content Include="Views\Movies\list.cshtml" />
     <Content Include="Views\Movies\details.cshtml" />
+    <Content Include="Views\Customer\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -380,6 +394,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403171012290_PopulateGenresTable.resx">
       <DependentUpon>202403171012290_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404031701537_addCustomerIsAdmin.resx">
+      <DependentUpon>202404031701537_addCustomerIsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404031814267_edit1.resx">
+      <DependentUpon>202404031814267_edit1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404031823480_edit2.resx">
+      <DependentUpon>202404031823480_edit2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
